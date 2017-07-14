@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+    <Button
+        android:id="@+id/selectButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDateSelectedButtonClick"
+        android:text="Set notification for this date" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDateCancelButtonClick"
+        android:text="remove notification" />
+    <Button
+        android:id="@+id/clearAllButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clearAll"
+        android:text="反馈" />
+
+
+</LinearLayout>
