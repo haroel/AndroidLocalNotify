@@ -25,7 +25,7 @@ GET STARTED
 		        // Create a new service client and bind our activity to this service
 		        ScheduleClient.getInstance().init(this);
    		  }
-4. 增加、删除本地消息，key表示一种消息类型id，由业务层自己维护
+4. 增加、删除本地消息，key表示一种消息类型id，push相同key值的通知将会自动更新，id类型由业务层自己维护
 	 > 
 	 		ScheduleClient.getInstance().addLocalNotify( new NotifyObject( {key} , {time} , {title}, {msg}));
 	      // 删除
