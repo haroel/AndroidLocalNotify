@@ -7,10 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.util.SparseArray;
 
-import static android.content.Context.MODE_PRIVATE;
 import static android.content.Context.NOTIFICATION_SERVICE;
 
 /**
@@ -113,6 +113,17 @@ public class ScheduleClient {
 			mIsBound = false;
 		}
 	}
+
+	/*
+	* 立即显示一个本地消息通知
+	* */
+	public void showLocalNotify(NotifyObject nobj){
+
+		NotificationManager mNM = (NotificationManager) mContext.getSystemService(NOTIFICATION_SERVICE);
+		NotificationCompat.Builder builder = nobj.toNotificationCompat(mContext);
+		mNM.notify( nobj.key , builder.build());
+	}
+
 	/*
 	* 增加一个本地 通知
 	* */

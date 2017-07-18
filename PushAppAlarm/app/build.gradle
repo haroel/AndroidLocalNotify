@@ -32,5 +32,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
 
-//    compile 'com.instabug.library:instabug:4.2.4'
+    compile 'com.instabug.library:instabug:4.2.5'
 }

@@ -22,8 +22,8 @@ public class NotifyObject {
 
     private static String NOTIFY_TAG = "_local_notify_";
 
-    public int key; // 标识通知id ，同一类id的通知只会显示一次
-    public long time;
+    public int key = 0; // 标识通知id ，同一类id的通知只会显示一次
+    public long time = 0;
     public String title;
     public String body;
     /*
